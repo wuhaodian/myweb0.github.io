@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript控制页面元素的显示与隐藏</title>
+
+</head>
+<body>
+    <h1>JavaScript控制元素显示与隐藏</h1>
+    
+    <div class="demo-area">
+        <h2>需要控制的输入框元素：</h2>
+        <hr>
+        <input id="txt1" type="text" placeholder="这是一个可以被控制的输入框，尝试改变我的可见性">
+        <hr>
+        
+        <div class="control-panel">
+            <button onclick="document.getElementById('txt1').style.visibility='hidden'">visibility隐藏</button>
+            <button onclick="document.getElementById('txt1').style.visibility='visible'">visibility显示</button>
+            <button onclick="document.getElementById('txt1').style.display='none'">display隐藏</button>
+            <button onclick="document.getElementById('txt1').style.display='block'">display显示</button>
+            <button class="reset" onclick="resetStyles()">重置所有样式</button>
+        </div>
+        
+        <div class="explanation">
+            <h3>属性区别说明：</h3>
+            <ul>
+                <li><strong>visibility:hidden</strong> - 元素不可见，但仍占据布局空间</li>
+                <li><strong>visibility:visible</strong> - 元素正常显示</li>
+                <li><strong>display:none</strong> - 元素完全从文档流中移除，不占据空间</li>
+                <li><strong>display:block</strong> - 元素显示为块级元素</li>
+            </ul>
+            <p>注意：使用display:none隐藏后，visibility属性将不再有效，直到display值被重置。</p>
+        </div>
+    </div>
+
+    <script>
+        // 重置所有样式函数
+        function resetStyles() {
+            const element = document.getElementById('txt1');
+            element.style.visibility = '';
+            element.style.display = '';
+            element.value = '';
+        }
+    </script>
+</body>
+</html>

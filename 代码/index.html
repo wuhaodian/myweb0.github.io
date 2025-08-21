@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电视剧滤镜</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 新增：主题切换按钮 -->
+    <div class="theme-switcher">
+        <button id="lightMode" class="active">白色</button>
+        <button id="darkMode">黑色</button>
+    </div>
+    
+    <nav>
+        <div class="nav-container">
+            <ul class="main-menu">
+                <!-- 剧集介绍 -->
+                <li class="menu-item">
+                    <span class="menu-text">剧集介绍</span>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">角色介绍</li>
+                        <li class="dropdown-item">分集剧情</li>
+                    </ul>
+                </li>
+
+                <!-- 精彩片段 -->
+                <li class="menu-item">
+                    <span class="menu-text">精彩片段</span>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">高光时刻</li>
+                        <li class="dropdown-item">经典台词</li>
+                        <li class="dropdown-item">情感戏份</li>
+                    </ul>
+                </li>
+
+                <!-- 幕后花絮 -->
+                <li class="menu-item">
+                    <span class="menu-text">幕后花絮</span>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">拍摄花絮</li>
+                        <li class="dropdown-item">演员采访</li>
+                        <li class="dropdown-item">服装设计</li>
+                        <li class="dropdown-item">特效解析</li>
+                    </ul>
+                </li>
+
+                 <!-- 联系我们 -->
+                <li class="menu-item">
+                    <a href="demo1.html" class="menu-text">联系我们</a> <!-- 直接使用 <a> 包裹文本 -->
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+            <!-- 新增：日期、时间和欢迎词显示 -->
+    <div class="datetime-welcome">
+        <div id="currentDateTime"></div>
+        <div id="welcomeMessage"></div>
+    </div>
+    
+    <!-- 在主题切换按钮后面添加收藏和设为首页按钮 -->
+    <div class="page-actions">
+        <a href="javascript:void(0);" id="addToFavorites">❤️ 添加到收藏夹</a>
+        <a href="javascript:void(0);" id="setAsHomepage">🏠 设为首页</a>
+    </div>
+
+    <div class="search-container">
+    <input type="text" id="siteSearch" placeholder="搜索内容...">
+    <button id="searchBtn">搜索</button>
+    <div id="searchResults" class="search-results"></div>
+</div>
+        <!-- 背景音乐 -->
+        <audio autoplay loop>
+            <source src="/music/视频转音频20250320201501.mp3" type="audio/mpeg">
+        </audio>
+        
+    <table>
+        <caption>
+            <a href="https://baike.baidu.com/item/%E6%BB%A4%E9%95%9C/62859125" target="_blank" style="text-decoration: none; color: inherit;">电视剧滤镜</a>
+        </caption>
+        <tr>
+            <td>
+                <img src="../images/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=8461937347216410437&skey=@crypt_4bb1822_a576f16e38d2b5fedafdfb46e7c8455e&mmweb_appid=wx_webfilehelper.jpg" alt="" width="200" height="150">
+            </td>
+            <td>
+                <img src="../images/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4511033587826340749&skey=@crypt_4bb1822_a576f16e38d2b5fedafdfb46e7c8455e&mmweb_appid=wx_webfilehelper.jpg" alt="" width="200" height="150">
+            </td>
+            <td>
+                <img src="../images/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5172851673954040953&skey=@crypt_4bb1822_a576f16e38d2b5fedafdfb46e7c8455e&mmweb_appid=wx_webfilehelper.jpg" alt="" width="200" height="150">
+            </td>
+            <td>
+                <img src="../images/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6471369137885566182&skey=@crypt_4bb1822_a576f16e38d2b5fedafdfb46e7c8455e&mmweb_appid=wx_webfilehelper.jpg" alt="" width="200" height="150">
+            </td>
+        </tr>
+        <tr>
+            <td class="description">这个</td>
+            <td class="description">三月</td>
+            <td class="description">我们</td>
+            <td class="description">追爱</td>
+        </tr>
+    </table>
+
+    <div class="video-selector">
+        <div class="video-option active" data-video="/video/大结局.mp4">群像</div>
+        <div class="video-option" data-video="/video/预告.mp4">预告</div>
+        <div class="video-option" data-video="/video/高光+1.mp4">高光</div>
+        <div class="video-option" data-video="/video/搞笑+2.mp4">经典</div>
+        <div class="video-option" data-video="/video/央视点评.mp4">央视点评</div>
+    </div>
+
+    <div class="video-container">
+        <!-- 左侧两张图片 -->
+        <div class="image-wrapper1">
+            <div class="image-item">
+                <img src="../images/檀健次.jpg" alt="">
+                <a href="demo3.html" class="description">檀健次 饰演唐奇</a>
+            </div>
+            <div class="image-item">
+                <img src="../images/李兰迪.jpg" alt="">
+                <a href="demo4.html" class="description">李兰迪 饰演苏橙橙</a>
+            </div>
+        </div>
+        <video id="main-video" controls></video>
+
+<!--         <video controls>
+            <source src="/video/990070350.mp4" type="video/mp4">
+        </video> -->
+
+        <!-- 右侧两张图片 -->
+        <div class="image-wrapper2">
+            <div class="image-item">
+                <img src="../images/高瀚宇.jpg" alt="">
+                <a href="demo.html" class="description">高瀚宇 饰演顾屿</a>
+            </div>
+            <div class="image-item">
+                <img src="../images/黄思瑞.jpg" alt="">
+                <a href="demo2.html" class="description">黄思瑞 饰演林媛</a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <p>© 2025 电视剧滤镜</p>
+    </div>
+    <script>
+        // 主题切换功能
+        const lightModeBtn = document.getElementById('lightMode');
+        const darkModeBtn = document.getElementById('darkMode');
+        const body = document.body;
+
+        // 默认浅色模式
+        body.classList.remove('dark-mode');
+
+        // 切换至深色模式
+        darkModeBtn.addEventListener('click', () => {
+            body.classList.add('dark-mode');
+            lightModeBtn.classList.remove('active');
+            darkModeBtn.classList.add('active');
+            localStorage.setItem('theme', 'dark');
+        });
+
+        // 切换至浅色模式
+        lightModeBtn.addEventListener('click', () => {
+            body.classList.remove('dark-mode');
+            darkModeBtn.classList.remove('active');
+            lightModeBtn.classList.add('active');
+            localStorage.setItem('theme', 'light');
+        });
+
+        // 读取本地存储的主题偏好
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            darkModeBtn.classList.add('active');
+            lightModeBtn.classList.remove('active');
+        }
+    </script>
+    <script>
+    // 视频切换功能
+    const videoOptions = document.querySelectorAll('.video-option');
+    const mainVideo = document.getElementById('main-video');
+    
+    // 默认加载第一个视频
+    mainVideo.src = videoOptions[0].dataset.video;
+    
+    // 点击切换视频
+    videoOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            // 更新活跃状态
+            videoOptions.forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+            
+            // 切换视频源
+            mainVideo.src = option.dataset.video;
+            mainVideo.load(); // 重新加载视频
+            mainVideo.play(); // 自动播放
+        });
+    });
+</script>
+
+<section class="actor-card">
+    <h3 data-target="tjc-details">剧集列表</h3>
+    <div id="tjc-details" style="display:none;">
+        <div id="episodes-container"></div>
+    </div>
+</section>
+<div class="game-container">
+    <h3>记忆卡片游戏</h3>
+    <div class="memory-game"></div>
+    <button id="restartGame">重新开始</button>
+    <div class="game-score">匹配: <span id="matches">0</span>/6</div>
+</div>
+</body>
+</html>

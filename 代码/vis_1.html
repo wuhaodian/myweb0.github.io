@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript控制页面元素的显示与隐藏</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        hr {
+            margin: 15px 0;
+        }
+        input {
+            padding: 8px;
+            margin: 5px 0;
+            width: 200px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 页面加载时显示的提示信息
+        alert("hello,you are welcome");
+        confirm("Are you ready?");
+    </script>
+
+    <div class="section">
+        <h2>使用visibility属性控制可见性</h2>
+        <p>visibility:visible - 元素可见但可能占用空间</p>
+        <p>visibility:hidden - 元素不可见但仍占用空间</p>
+        
+        <p>1、正常的输入框 (visibility:visible)</p>
+        <hr>
+        <input name="txt1" id="txt1" style="visibility:visible" placeholder="可见的输入框">
+        <hr>
+        
+        <p>2、隐藏的输入框 (visibility:hidden)</p>
+        <hr>
+        <input name="txt2" id="txt2" style="visibility:hidden" placeholder="隐藏的输入框(仍占用空间)">
+        <hr>
+        
+        <p>注意：隐藏的输入框仍然占据页面空间</p>
+    </div>
+
+    <div class="section">
+        <h2>使用display属性控制布局</h2>
+        <p>display:block - 元素显示为块级元素</p>
+        <p>display:none - 元素完全隐藏且不占用空间</p>
+        
+        <p>1、正常的输入框 (display:block)</p>
+        <hr>
+        <input name="txt3" id="txt3" style="display:block" placeholder="显示的输入框">
+        <hr>
+        
+        <p>2、隐藏的输入框 (display:none)</p>
+        <hr>
+        <input name="txt4" id="txt4" style="display:none" placeholder="完全隐藏的输入框">
+        <hr>
+        
+        <p>注意：隐藏的输入框不占据任何页面空间</p>
+    </div>
+
+    <div class="section">
+        <h2>两种隐藏方式的区别</h2>
+        <ul>
+            <li><strong>visibility:hidden</strong> - 元素不可见，但仍占据布局空间</li>
+            <li><strong>display:none</strong> - 元素完全从文档流中移除，不占据空间</li>
+        </ul>
+        <p>在实际开发中，根据是否需要保留元素占位空间选择合适的隐藏方式。</p>
+    </div>
+</body>
+</html>
